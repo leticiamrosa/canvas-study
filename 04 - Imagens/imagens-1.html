@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EXERCICIO 4 - Imagens</title>
+        
+         <script>
+            // Função para que o evento ocorra após a página ser carregada
+            window.onload = function() {
+            // Aqui trabalhamos com o Canvas
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <style>
+        
+
+        </style>
+        
+        <canvas id="meu_canvas" width="500" height="500">Seu navegador não suporta o Canvas do HTML5. Procure atualiza-lo</canvas>
+        
+        <script>
+            
+            // Canvas e Contexto
+            var canvas = document.getElementById('meu_canvas');  // Referenciando o Canvas
+            var context = canvas.getContext('2d'); // Obtendo o contexto gráfico
+            
+            // Carregar a imagem
+            var imagem = new Image(); // Cria a imagem
+            imagem.src = 'img/ovni.png'; // Chama a imagem
+            imagem.onload = function() {
+                // Aquui usaremos drawImage
+                    
+                // No evento onload, fazemos um loop para desenhar cinco OVNIs, um ao lado do outro. A variável x indica a posição de cada desenho
+                var x = 20;
+                
+                for (var i = 1; i <= 5; i++) {
+                    context.drawImage(imagem, x, 20, 64, 32); // O tamanho total da imagem do OVNI é 64x32
+                    x += 70; // Espaço entre eles
+                    // Se quiséssemos desenhar as imagens ampliadas ou reduzidas, bastaria modificar a largura e a altura
+                }
+                
+            }
+    
+            
+        </script>
+       
+        
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EXERCICIO 1</title>
+        
+         <script>
+            // Função para que o evento ocorra após a página ser carregada
+            window.onload = function() {
+            // Aqui trabalhamos com o Canvas
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <style>
+        
+
+        </style>
+        
+        <canvas id="meu_canvas" width="200" height="200">Seu navegador não suporta o Canvas do HTML5. Procure atualiza-lo</canvas>
+        
+        <script>
+            
+            // Canvas e Contexto
+            var canvas = document.getElementById('meu_canvas');  // Referenciando o Canvas
+            var context = canvas.getContext('2d'); // Obtendo o contexto gráfico
+            
+            // Preenchimento vermelho
+            context.fillStyle = 'red';
+            context.fillRect(50, 50, 100, 100);
+            
+            // Contorno azul, com espessura de 3px
+            context.lineWidth = 5; // Espessura da linha em pixels
+            context.strokeStyle = 'blue'; // Cor da linha
+            context.strokeRect(50, 50, 100, 100); // 
+            
+        </script>
+       
+        
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EXERCICIO 4 - Imagens</title>
+        
+         <script>
+            // Função para que o evento ocorra após a página ser carregada
+            window.onload = function() {
+            // Aqui trabalhamos com o Canvas
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <style>
+        
+
+        </style>
+        
+        <canvas id="meu_canvas" width="500" height="500">Seu navegador não suporta o Canvas do HTML5. Procure atualiza-lo</canvas>
+        
+        <script>
+            
+            // Canvas e Contexto
+            canvas = document.getElementById('meu_canvas');
+            context = canvas.getContext('2d');
+            
+            // Dados da Bola
+            var x = 20;
+            var y = 100;
+            var raio = 5;
+            
+            // Momento Inicial
+            var anterior = new Date().getTime();
+            
+            // Iniciar a animação
+            requestAnimationFrame(mexerBola);
+            
+            // Função de animação
+            function mexerBola() {
+                // Momento atual
+                var agora = new Data.getTime();
+                
+                // Diferença
+                var decorrido = agora - anterior;
+                
+                // Limpar o Canvas
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Desenhar a bola
+                context.beginPath();
+                context.ar(x, y, raio, 0, Math.PI*2);
+                context.fill();
+                
+                // Deslogar 20 pilxes para direita
+                var velocidade = 20;
+                x += velocidade * decorrido / 1000,
+                    
+                // Chamar o próximo ciclo de animação
+                    requestAnimationFrame(mexerBola);
+            }
+    
+            
+        </script>
+       
+        
+    </body>
+</html>

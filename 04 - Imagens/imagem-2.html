@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EXERCICIO 4 - Imagens</title>
+        
+         <script>
+            // Função para que o evento ocorra após a página ser carregada
+            window.onload = function() {
+            // Aqui trabalhamos com o Canvas
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <style>
+        
+
+        </style>
+        
+        <canvas id="meu_canvas" width="500" height="500">Seu navegador não suporta o Canvas do HTML5. Procure atualiza-lo</canvas>
+        
+        <script>
+            
+            // Canvas e Contexto
+            var canvas = document.getElementById('meu_canvas');  // Referenciando o Canvas
+            var context = canvas.getContext('2d'); // Obtendo o contexto gráfico
+            
+            var imagem = new Image();
+            imagem.src = 'img/explosao.png';
+            imagem.onload = function() {
+                context.drawImage( imagem,
+                                    80, 10, 60, 65, // Área de recorte (Clipping)
+                                    20, 20, 60, 65); // Desenha no Canvas
+                
+            }
+      
+    
+            
+        </script>
+       
+        
+    </body>
+</html>
